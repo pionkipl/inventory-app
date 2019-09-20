@@ -1,3 +1,9 @@
-<div class="inventory-app">
-  <app-products-list></app-products-list>
+<div class="ui main text container">
+  <div class="inventory-app">
+    <app-products-list
+        [productList]="products"
+        (onProductSelected)="productWasSelected($event)">
+    </app-products-list>
+  </div>
 </div>
+

@@ -1,6 +1,5 @@
 import { Component, Input, HostBinding } from '@angular/core';
 import { Product  } from '../product.model';
-import { I18nPluralPipe } from '@angular/common';
 
 @Component({
   selector: 'app-product-row',
@@ -9,6 +8,7 @@ import { I18nPluralPipe } from '@angular/common';
 })
 export class ProductRowComponent {
   @Input() product: Product;
+  @HostBinding('attr.class') cssClass = 'item';
 
   constructor() { }
 
